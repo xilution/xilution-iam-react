@@ -7,7 +7,7 @@
     "access": "restricted"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && copyup \"./src/**/*.d.ts\" ./dist",
     "clean": "rm -rf .cache coverage dist",
     "clean:all": "yarn clean && rm -rf node_modules",
     "lint": "yarn lint:tslint",

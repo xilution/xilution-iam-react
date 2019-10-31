@@ -13,7 +13,7 @@ export const authenticate = (
     validateStatus: () => true,
 });
 
-export const tokenFromGrantTypeAuthorizationCode = (
+export const getTokenWithAuthorizationCode = (
     env: string,
     organizationId: string,
     clientId: string,
@@ -28,7 +28,7 @@ export const tokenFromGrantTypeAuthorizationCode = (
     validateStatus: () => true,
 });
 
-export const tokenFromGrantTypeRefreshToken = (
+export const getTokenWithRefreshToken = (
     env: string,
     organizationId: string,
     clientId: string,

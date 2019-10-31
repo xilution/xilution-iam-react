@@ -1,8 +1,8 @@
 import {
     authenticate,
-    tokenFromGrantTypeAuthorizationCode,
-    tokenFromGrantTypeRefreshToken,
-} from "../brokers/xilution-core-authentication-broker";
+    getTokenWithAuthorizationCode,
+    getTokenWithRefreshToken,
+} from "../brokers/xilution-basics-zebra-broker";
 
 export const fetchTokensWithAuthorizationCode = async (
     env: string,
@@ -11,7 +11,7 @@ export const fetchTokensWithAuthorizationCode = async (
     code: string,
     redirectUri: string,
 ) => {
-    const response = await tokenFromGrantTypeAuthorizationCode(env, organizationId, clientId, code, redirectUri);
+    const response = await getTokenWithAuthorizationCode(env, organizationId, clientId, code, redirectUri);
     const {status, data} = response;
 
     if (status !== 200) {
@@ -33,7 +33,7 @@ export const fetchTokensWithRefreshToken = async (
     refreshToken: string,
     scope: string,
 ) => {
-    const response = await tokenFromGrantTypeRefreshToken(env, organizationId, clientId, refreshToken, scope);
+    const response = await getTokenWithRefreshToken(env, organizationId, clientId, refreshToken, scope);
     const {status, data} = response;
 
     if (status !== 200) {
