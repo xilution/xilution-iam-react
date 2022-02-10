@@ -68,7 +68,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.7.1",
     "jest-image-snapshot": "^2.5.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.1",
     "regenerator-runtime": "^0.13.3",
     "semantic-release": "^15.13.24",
